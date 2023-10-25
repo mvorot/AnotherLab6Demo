@@ -4,7 +4,15 @@ def encode(password: str) -> str:
 
 def decode(password: str):
     # partner codes this
-    pass
+    password = list(password)
+    decoded_password = []
+    for num in password:
+        new_num = int(num) - 3
+        if new_num < 0:
+            new_num += 10
+        decoded_password.append(str(new_num))
+    decoded_password = "".join(decoded_password)
+    return decoded_password
 
 
 def main():
