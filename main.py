@@ -31,6 +31,5 @@ def main():
             # print(f"The encoded password is {encoded_password}, and the original password is {password}.")
 
 
-if name == 'main':
-
+if __name__ == '__main__':
     main()
