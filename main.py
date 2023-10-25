@@ -1,17 +1,27 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def encode(password: str) -> str:
+    return ' '.join(str(int(num) + 3) for num in password)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def decode(password: str):
+    # partner codes this
+    pass
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-    fvddsfvfdeerbbaefr
+def main():
+    menu_option = None
+    password = ""
+    encoded_password = ""
+    while menu_option != '3':
+        menu_option = input("Please enter an option: ")
+        # Jason edit: encode password (add 3 to each int in string)
+        if menu_option == '1':
+            password = input("Please enter your password to encode: ")
+            encoded_password = encode(password=password)
+            print("Your password has been encoded and stored!")
+        elif menu_option == '2':
+            pass
+            # print(f"The encoded password is {encoded_password}, and the original password is {password}.")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+if name == 'main':
+    main()
